@@ -42,6 +42,7 @@ h2. Pending Request
 
 h2. Request Assigned
 
+- Passenger shall receive APNs sound/message notification when vehicle is assigned
 - Passenger can see estimated pickup time
 - Passenger shall receive APNs sound/message notification when vehicle is 5mins away
 - Passenger shall receive APNs sound/message notification when vehicle arrives
