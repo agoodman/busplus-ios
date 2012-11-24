@@ -16,6 +16,14 @@
 		7E0EF97A166081DB00ABF935 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E0EF979166081DB00ABF935 /* Default.png */; };
 		7E0EF97C166081DB00ABF935 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E0EF97B166081DB00ABF935 /* Default@2x.png */; };
 		7E0EF97E166081DB00ABF935 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E0EF97D166081DB00ABF935 /* Default-568h@2x.png */; };
+		7E0EF9861660822300ABF935 /* Storyboard-Phone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E0EF9851660822300ABF935 /* Storyboard-Phone.storyboard */; };
+		7E0EF9891660849A00ABF935 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0EF9881660849A00ABF935 /* HomeViewController.m */; };
+		7E0EF98C1660851E00ABF935 /* DestinationTypeSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0EF98B1660851E00ABF935 /* DestinationTypeSelectViewController.m */; };
+		7E0EF98F16608B0800ABF935 /* UIViewController+Dismissable.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0EF98E16608B0800ABF935 /* UIViewController+Dismissable.m */; };
+		7E0EF99216608B5F00ABF935 /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0EF99116608B5F00ABF935 /* AddressViewController.m */; };
+		7E0EF99516608D1500ABF935 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0EF99416608D1500ABF935 /* MapViewController.m */; };
+		7E0EF99716608E1400ABF935 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0EF99616608E1400ABF935 /* MapKit.framework */; };
+		7E0EF99A1660904600ABF935 /* ConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0EF9991660904500ABF935 /* ConfirmViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +40,20 @@
 		7E0EF979166081DB00ABF935 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7E0EF97B166081DB00ABF935 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7E0EF97D166081DB00ABF935 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7E0EF9851660822300ABF935 /* Storyboard-Phone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Storyboard-Phone.storyboard"; sourceTree = "<group>"; };
+		7E0EF9871660849A00ABF935 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		7E0EF9881660849A00ABF935 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		7E0EF98A1660851E00ABF935 /* DestinationTypeSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationTypeSelectViewController.h; sourceTree = "<group>"; };
+		7E0EF98B1660851E00ABF935 /* DestinationTypeSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationTypeSelectViewController.m; sourceTree = "<group>"; };
+		7E0EF98D16608B0800ABF935 /* UIViewController+Dismissable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Dismissable.h"; sourceTree = "<group>"; };
+		7E0EF98E16608B0800ABF935 /* UIViewController+Dismissable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Dismissable.m"; sourceTree = "<group>"; };
+		7E0EF99016608B5F00ABF935 /* AddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
+		7E0EF99116608B5F00ABF935 /* AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
+		7E0EF99316608D1500ABF935 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		7E0EF99416608D1500ABF935 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		7E0EF99616608E1400ABF935 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7E0EF9981660904500ABF935 /* ConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmViewController.h; sourceTree = "<group>"; };
+		7E0EF9991660904500ABF935 /* ConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E0EF99716608E1400ABF935 /* MapKit.framework in Frameworks */,
 				7E0EF968166081DB00ABF935 /* UIKit.framework in Frameworks */,
 				7E0EF96A166081DB00ABF935 /* Foundation.framework in Frameworks */,
 				7E0EF96C166081DB00ABF935 /* CoreGraphics.framework in Frameworks */,
@@ -68,6 +91,7 @@
 		7E0EF966166081DB00ABF935 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E0EF99616608E1400ABF935 /* MapKit.framework */,
 				7E0EF967166081DB00ABF935 /* UIKit.framework */,
 				7E0EF969166081DB00ABF935 /* Foundation.framework */,
 				7E0EF96B166081DB00ABF935 /* CoreGraphics.framework */,
@@ -78,9 +102,22 @@
 		7E0EF96D166081DB00ABF935 /* BusPlus */ = {
 			isa = PBXGroup;
 			children = (
+				7E0EF9841660820B00ABF935 /* Resources */,
 				7E0EF976166081DB00ABF935 /* AppDelegate.h */,
 				7E0EF977166081DB00ABF935 /* AppDelegate.m */,
 				7E0EF96E166081DB00ABF935 /* Supporting Files */,
+				7E0EF9871660849A00ABF935 /* HomeViewController.h */,
+				7E0EF9881660849A00ABF935 /* HomeViewController.m */,
+				7E0EF98A1660851E00ABF935 /* DestinationTypeSelectViewController.h */,
+				7E0EF98B1660851E00ABF935 /* DestinationTypeSelectViewController.m */,
+				7E0EF98D16608B0800ABF935 /* UIViewController+Dismissable.h */,
+				7E0EF98E16608B0800ABF935 /* UIViewController+Dismissable.m */,
+				7E0EF99016608B5F00ABF935 /* AddressViewController.h */,
+				7E0EF99116608B5F00ABF935 /* AddressViewController.m */,
+				7E0EF99316608D1500ABF935 /* MapViewController.h */,
+				7E0EF99416608D1500ABF935 /* MapViewController.m */,
+				7E0EF9981660904500ABF935 /* ConfirmViewController.h */,
+				7E0EF9991660904500ABF935 /* ConfirmViewController.m */,
 			);
 			path = BusPlus;
 			sourceTree = "<group>";
@@ -97,6 +134,14 @@
 				7E0EF97D166081DB00ABF935 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7E0EF9841660820B00ABF935 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7E0EF9851660822300ABF935 /* Storyboard-Phone.storyboard */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +199,7 @@
 				7E0EF97A166081DB00ABF935 /* Default.png in Resources */,
 				7E0EF97C166081DB00ABF935 /* Default@2x.png in Resources */,
 				7E0EF97E166081DB00ABF935 /* Default-568h@2x.png in Resources */,
+				7E0EF9861660822300ABF935 /* Storyboard-Phone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +212,12 @@
 			files = (
 				7E0EF974166081DB00ABF935 /* main.m in Sources */,
 				7E0EF978166081DB00ABF935 /* AppDelegate.m in Sources */,
+				7E0EF9891660849A00ABF935 /* HomeViewController.m in Sources */,
+				7E0EF98C1660851E00ABF935 /* DestinationTypeSelectViewController.m in Sources */,
+				7E0EF98F16608B0800ABF935 /* UIViewController+Dismissable.m in Sources */,
+				7E0EF99216608B5F00ABF935 /* AddressViewController.m in Sources */,
+				7E0EF99516608D1500ABF935 /* MapViewController.m in Sources */,
+				7E0EF99A1660904600ABF935 /* ConfirmViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
