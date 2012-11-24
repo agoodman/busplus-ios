@@ -1,0 +1,47 @@
+h1. Overview
+
+h2. System
+
+Bus Plus is a ride sharing logistics management system, designed to support 
+the local transportation needs of passengers by coordinating essential 
+information between passengers and drivers. 
+
+Passengers submit point-to-point travel requests to a central dispatch service.
+Requests are matched to nearby vehicles. Dispatch sends a bid request to each
+vehicle. Vehicles compute the impact of adding the passenger to their manifest
+and submit bids representing this value. After a short time, dispatch chooses 
+a bid (not necessarily lowest bid) and assigns the passenger to the given 
+vehicle. Once assigned, the passenger and driver both receive a notification 
+via iOS device. The only human interaction is the passenger data entry and the 
+final notification. There is no interaction required by the driver at all.
+
+h2. Passenger App
+
+This app, called Bus Plus, is a passenger interface to the Bus Plus API, which 
+coordinates between passengers and drivers to meet the collective need.
+
+Use cases are intentionally limited to the minimum required to achieve the 
+goals. They are described in more detail below.
+
+h1. Use Cases
+
+h2. Configure and Submit Request
+
+- Passenger can select destination by address
+- Passenger can select destination by map pin
+- Passenger can select destination by point of interest (POI)
+- Passenger can select immediate pickup
+- Passenger can select pickup time in the future
+- Passenger can submit travel request, consisting of pickup time and destination
+- Passenger can not submit a request while waiting for pending request
+
+h2. Pending Request
+
+- Passenger can see time stamp when request was submitted
+- Passenger can cancel pending request
+
+h2. Request Assigned
+
+- Passenger can see estimated pickup time
+- Passenger shall receive APNs sound/message notification when vehicle is 5mins away
+- Passenger shall receive APNs sound/message notification when vehicle arrives
