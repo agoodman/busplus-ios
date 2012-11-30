@@ -12,6 +12,10 @@
 
 - (IBAction)dismiss:(id)sender
 {
+    async_global(^{
+        [Passenger truncateAll];
+        [Vehicle truncateAll];
+    });
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

@@ -24,7 +24,36 @@
 		7E0EF99516608D1500ABF935 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0EF99416608D1500ABF935 /* MapViewController.m */; };
 		7E0EF99716608E1400ABF935 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0EF99616608E1400ABF935 /* MapKit.framework */; };
 		7E0EF99A1660904600ABF935 /* ConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0EF9991660904500ABF935 /* ConfirmViewController.m */; };
+		7E78E0F516684FC90066344A /* libBusPlusCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB7060016673212009D2CA0 /* libBusPlusCore.a */; };
+		7E78E0FE16684FF20066344A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E78E0F616684FF20066344A /* CFNetwork.framework */; };
+		7E78E0FF16684FF20066344A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E78E0F716684FF20066344A /* CoreData.framework */; };
+		7E78E10016684FF20066344A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E78E0F816684FF20066344A /* CoreLocation.framework */; };
+		7E78E10116684FF20066344A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E78E0F916684FF20066344A /* libxml2.dylib */; };
+		7E78E10216684FF20066344A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E78E0FA16684FF20066344A /* MobileCoreServices.framework */; };
+		7E78E10316684FF20066344A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E78E0FB16684FF20066344A /* QuartzCore.framework */; };
+		7E78E10416684FF20066344A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E78E0FC16684FF20066344A /* Security.framework */; };
+		7E78E10516684FF20066344A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E78E0FD16684FF20066344A /* SystemConfiguration.framework */; };
+		7E78E108166854F30066344A /* PickupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E78E107166854F30066344A /* PickupViewController.m */; };
+		7E78E1181668584B0066344A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E78E1161668584B0066344A /* Model.xcdatamodeld */; };
+		7E78E11C166864A70066344A /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E78E11B166864A70066344A /* AddressBookUI.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E78E0F316684FC20066344A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EB705F716673211009D2CA0 /* Bus Plus Core.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EE8FD3A166586B500401606;
+			remoteInfo = BusPlusCore;
+		};
+		7EB705FF16673212009D2CA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EB705F716673211009D2CA0 /* Bus Plus Core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7EE8FD3B166586B500401606;
+			remoteInfo = BusPlusCore;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7E0EF963166081DB00ABF935 /* BusPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +83,20 @@
 		7E0EF99616608E1400ABF935 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7E0EF9981660904500ABF935 /* ConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmViewController.h; sourceTree = "<group>"; };
 		7E0EF9991660904500ABF935 /* ConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmViewController.m; sourceTree = "<group>"; };
+		7E78E0F616684FF20066344A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7E78E0F716684FF20066344A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7E78E0F816684FF20066344A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7E78E0F916684FF20066344A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		7E78E0FA16684FF20066344A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7E78E0FB16684FF20066344A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7E78E0FC16684FF20066344A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7E78E0FD16684FF20066344A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7E78E106166854F30066344A /* PickupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickupViewController.h; sourceTree = "<group>"; };
+		7E78E107166854F30066344A /* PickupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickupViewController.m; sourceTree = "<group>"; };
+		7E78E1171668584B0066344A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		7E78E119166864100066344A /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		7E78E11B166864A70066344A /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		7EB705F716673211009D2CA0 /* Bus Plus Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Bus Plus Core.xcodeproj"; path = "BusPlusCore/Bus Plus Core.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +104,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E78E11C166864A70066344A /* AddressBookUI.framework in Frameworks */,
+				7E78E0FE16684FF20066344A /* CFNetwork.framework in Frameworks */,
+				7E78E0FF16684FF20066344A /* CoreData.framework in Frameworks */,
+				7E78E10016684FF20066344A /* CoreLocation.framework in Frameworks */,
+				7E78E10116684FF20066344A /* libxml2.dylib in Frameworks */,
+				7E78E10216684FF20066344A /* MobileCoreServices.framework in Frameworks */,
+				7E78E10316684FF20066344A /* QuartzCore.framework in Frameworks */,
+				7E78E10416684FF20066344A /* Security.framework in Frameworks */,
+				7E78E10516684FF20066344A /* SystemConfiguration.framework in Frameworks */,
+				7E78E0F516684FC90066344A /* libBusPlusCore.a in Frameworks */,
 				7E0EF99716608E1400ABF935 /* MapKit.framework in Frameworks */,
 				7E0EF968166081DB00ABF935 /* UIKit.framework in Frameworks */,
 				7E0EF96A166081DB00ABF935 /* Foundation.framework in Frameworks */,
@@ -74,6 +127,7 @@
 		7E0EF958166081DB00ABF935 = {
 			isa = PBXGroup;
 			children = (
+				7EB705F716673211009D2CA0 /* Bus Plus Core.xcodeproj */,
 				7E0EF96D166081DB00ABF935 /* BusPlus */,
 				7E0EF966166081DB00ABF935 /* Frameworks */,
 				7E0EF964166081DB00ABF935 /* Products */,
@@ -91,6 +145,16 @@
 		7E0EF966166081DB00ABF935 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E78E11B166864A70066344A /* AddressBookUI.framework */,
+				7E78E119166864100066344A /* AddressBook.framework */,
+				7E78E0F616684FF20066344A /* CFNetwork.framework */,
+				7E78E0F716684FF20066344A /* CoreData.framework */,
+				7E78E0F816684FF20066344A /* CoreLocation.framework */,
+				7E78E0F916684FF20066344A /* libxml2.dylib */,
+				7E78E0FA16684FF20066344A /* MobileCoreServices.framework */,
+				7E78E0FB16684FF20066344A /* QuartzCore.framework */,
+				7E78E0FC16684FF20066344A /* Security.framework */,
+				7E78E0FD16684FF20066344A /* SystemConfiguration.framework */,
 				7E0EF99616608E1400ABF935 /* MapKit.framework */,
 				7E0EF967166081DB00ABF935 /* UIKit.framework */,
 				7E0EF969166081DB00ABF935 /* Foundation.framework */,
@@ -118,6 +182,8 @@
 				7E0EF99416608D1500ABF935 /* MapViewController.m */,
 				7E0EF9981660904500ABF935 /* ConfirmViewController.h */,
 				7E0EF9991660904500ABF935 /* ConfirmViewController.m */,
+				7E78E106166854F30066344A /* PickupViewController.h */,
+				7E78E107166854F30066344A /* PickupViewController.m */,
 			);
 			path = BusPlus;
 			sourceTree = "<group>";
@@ -140,8 +206,17 @@
 			isa = PBXGroup;
 			children = (
 				7E0EF9851660822300ABF935 /* Storyboard-Phone.storyboard */,
+				7E78E1161668584B0066344A /* Model.xcdatamodeld */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		7EB705F816673211009D2CA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EB7060016673212009D2CA0 /* libBusPlusCore.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +233,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7E78E0F416684FC20066344A /* PBXTargetDependency */,
 			);
 			name = BusPlus;
 			productName = BusPlus;
@@ -183,12 +259,28 @@
 			mainGroup = 7E0EF958166081DB00ABF935;
 			productRefGroup = 7E0EF964166081DB00ABF935 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7EB705F816673211009D2CA0 /* Products */;
+					ProjectRef = 7EB705F716673211009D2CA0 /* Bus Plus Core.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7E0EF962166081DB00ABF935 /* BusPlus */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7EB7060016673212009D2CA0 /* libBusPlusCore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBusPlusCore.a;
+			remoteRef = 7EB705FF16673212009D2CA0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7E0EF961166081DB00ABF935 /* Resources */ = {
@@ -218,10 +310,20 @@
 				7E0EF99216608B5F00ABF935 /* AddressViewController.m in Sources */,
 				7E0EF99516608D1500ABF935 /* MapViewController.m in Sources */,
 				7E0EF99A1660904600ABF935 /* ConfirmViewController.m in Sources */,
+				7E78E108166854F30066344A /* PickupViewController.m in Sources */,
+				7E78E1181668584B0066344A /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E78E0F416684FC20066344A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BusPlusCore;
+			targetProxy = 7E78E0F316684FC20066344A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7E0EF970166081DB00ABF935 /* InfoPlist.strings */ = {
@@ -290,7 +392,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BusPlus/BusPlus-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "BusPlus/BusPlus-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -301,7 +408,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BusPlus/BusPlus-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "BusPlus/BusPlus-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -326,8 +438,22 @@
 				7E0EF983166081DB00ABF935 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7E78E1161668584B0066344A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7E78E1171668584B0066344A /* Model.xcdatamodel */,
+			);
+			currentVersion = 7E78E1171668584B0066344A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7E0EF95A166081DB00ABF935 /* Project object */;
 }

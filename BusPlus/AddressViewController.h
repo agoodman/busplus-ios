@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 
-@interface AddressViewController : UIViewController
+@interface AddressViewController : UIViewController <UITextFieldDelegate>
 
 @property (strong) IBOutlet UITextField* addressField;
+
+-(IBAction)nextButtonPressed:(id)sender;
 
 @end

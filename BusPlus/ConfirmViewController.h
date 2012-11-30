@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+
 
 @interface ConfirmViewController : UIViewController
+
+@property (strong) IBOutlet UILabel* destinationLabel;
+@property (strong) IBOutlet MKMapView* mapView;
 
 @end

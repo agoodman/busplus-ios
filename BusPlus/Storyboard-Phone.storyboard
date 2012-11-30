@@ -17,9 +17,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FxJ-lF-ajB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-161" y="-854"/>
+            <point key="canvasLocation" x="-409" y="-854"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home View Controller - bus+-->
         <scene sceneID="fgH-fG-dAY">
             <objects>
                 <viewController id="sbU-FJ-8nc" customClass="HomeViewController" sceneMemberID="viewController">
@@ -27,11 +27,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" BusPlus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyN-yr-iaY">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5EI-4E-Rwk">
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Waiting For Ride" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUz-Kd-osS">
@@ -53,7 +48,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rm8-dE-oxU">
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <state key="normal" title="Cancel Request">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,11 +73,11 @@
                                     <constraint firstAttribute="trailing" secondItem="Rm8-dE-oxU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="wFV-cS-vsX"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEN-e5-gk1">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEN-e5-gk1">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qd3-9Q-l1P">
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="I Need A Ride Now">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="I Need A Ride">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -106,17 +101,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nEN-e5-gk1" firstAttribute="trailing" secondItem="PVY-dO-WZS" secondAttribute="trailing" type="default" id="8zR-kS-SUU"/>
-                            <constraint firstItem="uyN-yr-iaY" firstAttribute="top" secondItem="PVY-dO-WZS" secondAttribute="top" constant="20" symbolic="YES" type="default" id="AVW-uG-7Gj"/>
-                            <constraint firstAttribute="trailing" secondItem="uyN-yr-iaY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Asc-ii-VHc"/>
                             <constraint firstItem="5EI-4E-Rwk" firstAttribute="trailing" secondItem="PVY-dO-WZS" secondAttribute="trailing" type="default" id="IPg-4S-hsU"/>
                             <constraint firstItem="5EI-4E-Rwk" firstAttribute="leading" secondItem="PVY-dO-WZS" secondAttribute="leading" type="default" id="V8B-LS-seG"/>
-                            <constraint firstItem="5EI-4E-Rwk" firstAttribute="top" secondItem="uyN-yr-iaY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Yzc-ti-Nhn"/>
-                            <constraint firstItem="nEN-e5-gk1" firstAttribute="top" secondItem="uyN-yr-iaY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dUD-HV-DbF"/>
-                            <constraint firstItem="uyN-yr-iaY" firstAttribute="leading" secondItem="PVY-dO-WZS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eYK-aH-TSp"/>
+                            <constraint firstItem="nEN-e5-gk1" firstAttribute="bottom" secondItem="5EI-4E-Rwk" secondAttribute="bottom" type="default" id="YcW-cv-6ui"/>
+                            <constraint firstItem="nEN-e5-gk1" firstAttribute="top" secondItem="PVY-dO-WZS" secondAttribute="top" type="default" id="lMJ-9w-Jmw"/>
                             <constraint firstItem="nEN-e5-gk1" firstAttribute="leading" secondItem="PVY-dO-WZS" secondAttribute="leading" type="default" id="oTn-hH-Hb6"/>
+                            <constraint firstItem="5EI-4E-Rwk" firstAttribute="top" secondItem="PVY-dO-WZS" secondAttribute="top" type="default" id="plV-ke-bSz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="78d-21-94W"/>
+                    <navigationItem key="navigationItem" title="bus+" id="78d-21-94W"/>
                     <connections>
                         <outlet property="createView" destination="nEN-e5-gk1" id="7Ao-j2-45o"/>
                         <outlet property="pendingView" destination="5EI-4E-Rwk" id="0gn-Jj-V1V"/>
@@ -126,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ctw-ct-YDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="342" y="-854"/>
+            <point key="canvasLocation" x="94" y="-854"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J4V-KP-Ayn">
@@ -136,12 +129,77 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="pdH-um-Woc" kind="relationship" relationship="rootViewController" id="qau-bA-rVa"/>
+                        <segue destination="SjG-Ev-aL2" kind="relationship" relationship="rootViewController" id="oZI-VY-npv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NAa-ac-TBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="942" y="-854"/>
+            <point key="canvasLocation" x="552" y="-854"/>
+        </scene>
+        <!--Pickup View Controller - Pickup-->
+        <scene sceneID="HHQ-Pr-iw7">
+            <objects>
+                <viewController id="SjG-Ev-aL2" customClass="PickupViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qEq-70-SS9">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pv-Zk-IQZ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="ofO-1D-4hb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Use My Current Location">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="useCurrentLocation:" destination="SjG-Ev-aL2" eventType="touchUpInside" id="i3c-MC-XOY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDA-ln-CLf">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Map">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="useMap:" destination="SjG-Ev-aL2" eventType="touchUpInside" id="N8O-Yt-gdC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3pv-Zk-IQZ" firstAttribute="top" secondItem="qEq-70-SS9" secondAttribute="top" constant="20" symbolic="YES" type="default" id="3pM-dT-but"/>
+                            <constraint firstAttribute="trailing" secondItem="3pv-Zk-IQZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4bS-ze-5bC"/>
+                            <constraint firstItem="UDA-ln-CLf" firstAttribute="leading" secondItem="qEq-70-SS9" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8NB-vp-o2z"/>
+                            <constraint firstAttribute="trailing" secondItem="UDA-ln-CLf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="KQO-dU-xFt"/>
+                            <constraint firstItem="3pv-Zk-IQZ" firstAttribute="leading" secondItem="qEq-70-SS9" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gxT-Nb-K1d"/>
+                            <constraint firstItem="UDA-ln-CLf" firstAttribute="top" secondItem="3pv-Zk-IQZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sia-6o-eH7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pickup" id="HdU-sI-OgJ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cPz-vj-fyL">
+                            <connections>
+                                <action selector="dismiss:" destination="SjG-Ev-aL2" id="lFI-fr-ylM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="locationManager" destination="pY0-3Z-0oW" id="yXY-Ms-xnn"/>
+                        <segue destination="pdH-um-Woc" kind="push" identifier="ShowDestination" id="7WB-dj-LA8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfk-rl-hUW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="pY0-3Z-0oW" customClass="CLLocationManager"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="-854"/>
         </scene>
         <!--Destination Type Select View Controller - Destination-->
         <scene sceneID="z8I-70-lPY">
@@ -232,6 +290,9 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7Xm-UM-08B">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fXL-Qy-3Lh" id="eLr-DT-RAf"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -245,6 +306,11 @@
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="n59-G5-Qc4">
                             <connections>
                                 <action selector="dismiss:" destination="fXL-Qy-3Lh" id="sR4-jv-p6K"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="J8A-FR-rSA">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="fXL-Qy-3Lh" id="kmi-4Q-kke"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -323,36 +389,32 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Destination" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbS-Fn-fJs">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Destination" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="nbS-Fn-fJs">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OFD-ZY-vyH"/>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Immediately" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0e-5M-uyc">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFD-ZY-vyH">
+                                <connections>
+                                    <outlet property="delegate" destination="wQj-34-tGu" id="Fq0-9v-pVL"/>
+                                </connections>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nbS-Fn-fJs" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="2xB-JE-AWm"/>
+                            <constraint firstItem="tQc-oN-ZAO" firstAttribute="top" secondItem="OFD-ZY-vyH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="41H-tS-TbV"/>
                             <constraint firstItem="tQc-oN-ZAO" firstAttribute="leading" secondItem="8uY-Qe-FeX" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4tJ-5F-tJ4"/>
                             <constraint firstAttribute="bottom" secondItem="tQc-oN-ZAO" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="5Qv-Sg-ir3"/>
-                            <constraint firstItem="OFD-ZY-vyH" firstAttribute="top" secondItem="nbS-Fn-fJs" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HX2-OP-0Ob"/>
                             <constraint firstAttribute="trailing" secondItem="tQc-oN-ZAO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="IZN-hf-TQT"/>
                             <constraint firstItem="OFD-ZY-vyH" firstAttribute="leading" secondItem="8uY-Qe-FeX" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JWg-ZD-a1B"/>
                             <constraint firstAttribute="trailing" secondItem="OFD-ZY-vyH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Kcn-AS-Dzr"/>
                             <constraint firstItem="nbS-Fn-fJs" firstAttribute="leading" secondItem="8uY-Qe-FeX" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="NJM-Q3-MMl"/>
-                            <constraint firstItem="H0e-5M-uyc" firstAttribute="top" secondItem="OFD-ZY-vyH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TFr-Tb-uK6"/>
                             <constraint firstItem="zL0-uG-0ig" firstAttribute="top" secondItem="8uY-Qe-FeX" secondAttribute="top" constant="20" symbolic="YES" type="default" id="YVf-yx-MP0"/>
+                            <constraint firstItem="OFD-ZY-vyH" firstAttribute="top" secondItem="nbS-Fn-fJs" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="aTR-YS-zIf"/>
                             <constraint firstItem="zL0-uG-0ig" firstAttribute="leading" secondItem="8uY-Qe-FeX" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="d7T-xy-7lY"/>
                             <constraint firstAttribute="trailing" secondItem="zL0-uG-0ig" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="feh-Fr-gEi"/>
-                            <constraint firstItem="H0e-5M-uyc" firstAttribute="leading" secondItem="8uY-Qe-FeX" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gIP-2c-qgb"/>
-                            <constraint firstItem="tQc-oN-ZAO" firstAttribute="top" secondItem="H0e-5M-uyc" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lxz-pN-GkK"/>
                             <constraint firstItem="nbS-Fn-fJs" firstAttribute="top" secondItem="zL0-uG-0ig" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="od3-lg-oJy"/>
-                            <constraint firstAttribute="trailing" secondItem="H0e-5M-uyc" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="uaR-LQ-f1T"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Confirm Request" id="Pib-KJ-P9q">
@@ -362,6 +424,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="destinationLabel" destination="nbS-Fn-fJs" id="jMi-rU-yav"/>
+                        <outlet property="mapView" destination="OFD-ZY-vyH" id="hhK-sT-rfX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Xn-Tw-und" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -390,11 +456,19 @@
         <class className="AddressViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddressViewController.h"/>
             <relationships>
+                <relationship kind="action" name="nextButtonPressed:"/>
                 <relationship kind="outlet" name="addressField" candidateClass="UITextField"/>
             </relationships>
         </class>
+        <class className="CLLocationManager" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CLLocationManager.h"/>
+        </class>
         <class className="ConfirmViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ConfirmViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="destinationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
         </class>
         <class className="DestinationTypeSelectViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DestinationTypeSelectViewController.h"/>
@@ -425,6 +499,14 @@
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
+        <class className="PickupViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PickupViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="useCurrentLocation:"/>
+                <relationship kind="action" name="useMap:"/>
+                <relationship kind="outlet" name="locationManager" candidateClass="CLLocationManager"/>
+            </relationships>
+        </class>
         <class className="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UIViewController.h"/>
             <relationships>
@@ -438,6 +520,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Xgt-cH-OQR"/>
+        <segue reference="2nV-mU-qbO"/>
     </inferredMetricsTieBreakers>
 </document>

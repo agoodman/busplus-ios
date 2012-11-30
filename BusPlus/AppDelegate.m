@@ -12,6 +12,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // set up RestKit
+    RKObjectManager* tMgr = [RKObjectManager managerWithBaseURLString:@"http://buspl.us/api"];
+    tMgr.objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"BusPlus.sqlite3"];
+    
+    [Passenger initObjectLoader:tMgr];
+    [Vehicle initObjectLoader:tMgr];
+    
     return YES;
 }
 
