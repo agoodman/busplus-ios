@@ -1,0 +1,3 @@
+[submodule "BusPlusCore"]
+	path = BusPlusCore
+	url = git@github.com:agoodman/busplus-core-ios.git
