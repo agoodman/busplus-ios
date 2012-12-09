@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UIViewController <RKObjectLoaderDelegate>
 
 @property (strong) IBOutlet UIView* pendingView;
 @property (strong) IBOutlet UIView* createView;
@@ -16,5 +16,6 @@
 
 -(IBAction)requestNow:(id)sender;
 -(IBAction)requestLater:(id)sender;
+-(IBAction)cancelRequest:(id)sender;
 
 @end

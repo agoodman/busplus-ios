@@ -56,6 +56,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancelRequest:" destination="sbU-FJ-8nc" eventType="touchUpInside" id="E4y-7X-yBg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -383,6 +386,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendRequest:" destination="wQj-34-tGu" eventType="touchUpInside" id="dGK-1W-cpM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Requesting a ride to:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zL0-uG-0ig">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -466,6 +472,7 @@
         <class className="ConfirmViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ConfirmViewController.h"/>
             <relationships>
+                <relationship kind="action" name="sendRequest:"/>
                 <relationship kind="outlet" name="destinationLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
@@ -482,6 +489,7 @@
         <class className="HomeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancelRequest:"/>
                 <relationship kind="action" name="requestLater:"/>
                 <relationship kind="action" name="requestNow:"/>
                 <relationship kind="outlet" name="createView" candidateClass="UIView"/>
