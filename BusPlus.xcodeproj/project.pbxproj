@@ -24,6 +24,8 @@
 		7E0EF99516608D1500ABF935 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0EF99416608D1500ABF935 /* MapViewController.m */; };
 		7E0EF99716608E1400ABF935 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0EF99616608E1400ABF935 /* MapKit.framework */; };
 		7E0EF99A1660904600ABF935 /* ConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0EF9991660904500ABF935 /* ConfirmViewController.m */; };
+		7E73F80C166AC07A0068D59B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E73F80B166AC0790068D59B /* Icon.png */; };
+		7E73F80E166AC0B70068D59B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E73F80D166AC0B70068D59B /* Icon@2x.png */; };
 		7E78E0F516684FC90066344A /* libBusPlusCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB7060016673212009D2CA0 /* libBusPlusCore.a */; };
 		7E78E0FE16684FF20066344A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E78E0F616684FF20066344A /* CFNetwork.framework */; };
 		7E78E0FF16684FF20066344A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E78E0F716684FF20066344A /* CoreData.framework */; };
@@ -83,6 +85,8 @@
 		7E0EF99616608E1400ABF935 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7E0EF9981660904500ABF935 /* ConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmViewController.h; sourceTree = "<group>"; };
 		7E0EF9991660904500ABF935 /* ConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmViewController.m; sourceTree = "<group>"; };
+		7E73F80B166AC0790068D59B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		7E73F80D166AC0B70068D59B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		7E78E0F616684FF20066344A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		7E78E0F716684FF20066344A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7E78E0F816684FF20066344A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -127,6 +131,8 @@
 		7E0EF958166081DB00ABF935 = {
 			isa = PBXGroup;
 			children = (
+				7E73F80D166AC0B70068D59B /* Icon@2x.png */,
+				7E73F80B166AC0790068D59B /* Icon.png */,
 				7EB705F716673211009D2CA0 /* Bus Plus Core.xcodeproj */,
 				7E0EF96D166081DB00ABF935 /* BusPlus */,
 				7E0EF966166081DB00ABF935 /* Frameworks */,
@@ -292,6 +298,8 @@
 				7E0EF97C166081DB00ABF935 /* Default@2x.png in Resources */,
 				7E0EF97E166081DB00ABF935 /* Default-568h@2x.png in Resources */,
 				7E0EF9861660822300ABF935 /* Storyboard-Phone.storyboard in Resources */,
+				7E73F80C166AC07A0068D59B /* Icon.png in Resources */,
+				7E73F80E166AC0B70068D59B /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
