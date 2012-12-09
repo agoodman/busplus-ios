@@ -18,6 +18,22 @@
 
 @synthesize destinationLabel = _destinationLabel, mapView = _mapView;
 
+- (IBAction)sendRequest:(id)sender
+{
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(completeRequest:) name:@"PushNotificationEnabled" object:nil];
+}
+
+- (void)completeRequest:(NSNotification*)aNotif
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"PushNotificationEnabled" object:nil];
+    NSString* tToken = (NSString*)aNotif.object;
+    
+    Passenger* tPassenger = [Passenger findFirst];
+    tPassenger.token = tToken;
+    [[RKObjectManager sharedManager] postObject:tPassenger delegate:self];
+}
+
 #pragma mark - View life cycle
 
 - (void)viewDidLoad
@@ -87,6 +103,22 @@
     }
     
     return nil;
+}
+
+#pragma mark - RKObjectLoaderDelegate
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
+{
+    async_main(^{
+        Alert(@"Unable To Send Request", [error localizedDescription]);
+    });
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObject:(id)object
+{
+    async_main(^{
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    });
 }
 
 @end

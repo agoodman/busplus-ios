@@ -49,4 +49,56 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - Push notification
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    async_main(^{
+        if( [[error.userInfo description] rangeOfString:@"simulator"].location!=NSNotFound ) {
+            NSLog(@"simulating push notification");
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"PushNotificationEnabled" object:@"abc123"];
+        }else{
+            NSLog(@"push notification error: %@",error.userInfo);
+            Alert(@"Push Notification Required", @"An error was encountered");
+        }
+    });
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    async_main(^{
+        NSString* tRaw = [deviceToken description];
+        NSString* tToken = [[[tRaw stringByReplacingOccurrencesOfString:@"<" withString:@""] stringByReplacingOccurrencesOfString:@">" withString:@""] stringByReplacingOccurrencesOfString:@" " withString:@""];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"PushNotificationEnabled" object:tToken];
+    });
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    NSLog(@"remote notification: %@",userInfo);
+    NSNumber* tVehicleId = [userInfo valueForKey:@"vehicle_id"];
+    if( tVehicleId ) {
+        Passenger* tPassenger = [Passenger findFirst];
+        tPassenger.vehicleId = tVehicleId;
+        
+        Vehicle* tVehicle = [Vehicle object];
+        tVehicle.vehicleId = tVehicleId;
+        [[RKObjectManager sharedManager] getObject:tVehicle delegate:self];
+    }
+}
+
+#pragma mark - RKObjectLoaderDelegate
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
+{
+    NSLog(@"Vehicle Web Error: %@",objectLoader.response.bodyAsString);
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObject:(id)object
+{
+    if( [object isKindOfClass:[Vehicle class]] ) {
+        NSLog(@"vehicle assigned: %@",object);
+    }
+}
+
 @end

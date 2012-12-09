@@ -10,9 +10,11 @@
 #import <MapKit/MapKit.h>
 
 
-@interface ConfirmViewController : UIViewController
+@interface ConfirmViewController : UIViewController <RKObjectLoaderDelegate>
 
 @property (strong) IBOutlet UILabel* destinationLabel;
 @property (strong) IBOutlet MKMapView* mapView;
+
+-(IBAction)sendRequest:(id)sender;
 
 @end
