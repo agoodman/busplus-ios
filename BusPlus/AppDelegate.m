@@ -14,6 +14,7 @@
 {
     // set up RestKit
     RKObjectManager* tMgr = [RKObjectManager managerWithBaseURLString:@"http://buspl.us/api"];
+    tMgr.client.requestQueue.concurrentRequestsLimit = 1;
     tMgr.objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"BusPlus.sqlite3"];
     
     [Passenger initObjectLoader:tMgr];
@@ -30,8 +31,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [[RKObjectManager sharedManager].objectStore save:nil];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -79,7 +79,7 @@
     NSNumber* tVehicleId = [userInfo valueForKey:@"vehicle_id"];
     if( tVehicleId ) {
         Passenger* tPassenger = [Passenger findFirst];
-        tPassenger.vehicleId = tVehicleId;
+        [[RKObjectManager sharedManager] getObject:tPassenger delegate:self];
         
         Vehicle* tVehicle = [Vehicle object];
         tVehicle.vehicleId = tVehicleId;
@@ -91,13 +91,21 @@
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
 {
-    NSLog(@"Vehicle Web Error: %@",objectLoader.response.bodyAsString);
+    NSLog(@"Web Service Error\nrequest: %@ %@ %@\nresponse: %@",(objectLoader.response.request.method==RKRequestMethodGET ? @"GET" : (objectLoader.response.request.method==RKRequestMethodPUT ? @"PUT" : (objectLoader.response.request.method==RKRequestMethodPOST ? @"POST" : (objectLoader.response.request.method==RKRequestMethodDELETE ? @"DELETE" : @"???" )))),objectLoader.resourcePath,objectLoader.response.request.HTTPBodyString,objectLoader.response.bodyAsString);
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObject:(id)object
 {
+    if( [object isKindOfClass:[Passenger class]] ) {
+        NSLog(@"passenger assigned: %@",object);
+    }
     if( [object isKindOfClass:[Vehicle class]] ) {
-        NSLog(@"vehicle assigned: %@",object);
+        NSLog(@"vehicle received: %@",object);
+        async_main(^{
+            Passenger* tPassenger = [Passenger findFirst];
+            tPassenger.vehicle = (Vehicle*)object;
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"PassengerUpdated" object:nil];
+        });
     }
 }
 
