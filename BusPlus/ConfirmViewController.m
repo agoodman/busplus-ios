@@ -20,7 +20,7 @@
 
 - (IBAction)sendRequest:(id)sender
 {
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge];
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(completeRequest:) name:@"PushNotificationEnabled" object:nil];
 }
 
