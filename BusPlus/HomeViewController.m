@@ -14,7 +14,7 @@
 
 @implementation HomeViewController
 
-@synthesize pendingView = _pendingView, createView = _createView, requestButton = _requestButton;
+@synthesize pendingView = _pendingView, createView = _createView, pickupView = _pickupView, mapView = _mapView, requestButton = _requestButton;
 
 - (IBAction)requestNow:(id)sender
 {
@@ -53,11 +53,19 @@
     [super viewWillAppear:animated];
 
     Passenger* tPassenger = [Passenger findFirst];
-    if( tPassenger ) {
+    if( tPassenger && tPassenger.assignedAt ) {
+        double tLat = (tPassenger.vehicle.latitude.doubleValue+tPassenger.startLatitude.doubleValue)/2.0,
+            tLng = (tPassenger.vehicle.longitude.doubleValue+tPassenger.startLongitude.doubleValue)/2.0,
+            tRng = MAX(abs(tPassenger.vehicle.latitude.doubleValue-tPassenger.startLatitude.doubleValue),abs(tPassenger.vehicle.longitude.doubleValue-tPassenger.startLongitude.doubleValue));
+        
+        [self.mapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake(tLat,tLng), MKCoordinateSpanMake(tRng,tRng)) animated:NO];
+        self.pendingView.hidden = self.createView.hidden = YES;
+        self.pickupView.hidden = NO;
+    }else if( tPassenger ) {
+        self.createView.hidden = self.pickupView.hidden = YES;
         self.pendingView.hidden = NO;
-        self.createView.hidden = YES;
     }else{
-        self.pendingView.hidden = YES;
+        self.pendingView.hidden = self.pickupView.hidden = YES;
         self.createView.hidden = NO;
     }
 }

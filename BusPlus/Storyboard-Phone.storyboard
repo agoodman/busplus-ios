@@ -27,24 +27,19 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5EI-4E-Rwk">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5EI-4E-Rwk">
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Waiting For Ride" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUz-Kd-osS">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pending Vehicle Assignment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUz-Kd-osS">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Estimated Arrival in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFu-XG-Xvp">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="8 mins" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="au9-4w-cpH">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This may take up to 30sec" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFu-XG-Xvp">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="114" id="M3e-wf-U5k"/>
+                                            <constraint firstAttribute="height" constant="21" id="umy-Sw-Joz"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rm8-dE-oxU">
@@ -67,12 +62,11 @@
                                     <constraint firstItem="zUz-Kd-osS" firstAttribute="leading" secondItem="5EI-4E-Rwk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="C9v-ed-9LH"/>
                                     <constraint firstAttribute="bottom" secondItem="Rm8-dE-oxU" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ETG-de-I2x"/>
                                     <constraint firstItem="yFu-XG-Xvp" firstAttribute="top" secondItem="zUz-Kd-osS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Eoz-5p-z1y"/>
-                                    <constraint firstItem="yFu-XG-Xvp" firstAttribute="baseline" secondItem="au9-4w-cpH" secondAttribute="baseline" type="default" id="bqn-Y0-C3S"/>
+                                    <constraint firstItem="Rm8-dE-oxU" firstAttribute="top" secondItem="yFu-XG-Xvp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Huh-mK-58z"/>
                                     <constraint firstItem="zUz-Kd-osS" firstAttribute="top" secondItem="5EI-4E-Rwk" secondAttribute="top" constant="20" symbolic="YES" type="default" id="eER-cE-MlF"/>
-                                    <constraint firstAttribute="trailing" secondItem="au9-4w-cpH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="eV6-lI-7aK"/>
                                     <constraint firstItem="yFu-XG-Xvp" firstAttribute="leading" secondItem="5EI-4E-Rwk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kX2-uZ-muo"/>
                                     <constraint firstAttribute="trailing" secondItem="zUz-Kd-osS" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="n8N-pj-wjo"/>
-                                    <constraint firstItem="Rm8-dE-oxU" firstAttribute="top" secondItem="yFu-XG-Xvp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qGD-q7-tAP"/>
+                                    <constraint firstAttribute="trailing" secondItem="yFu-XG-Xvp" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="v8i-om-57L"/>
                                     <constraint firstAttribute="trailing" secondItem="Rm8-dE-oxU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="wFV-cS-vsX"/>
                                 </constraints>
                             </view>
@@ -100,22 +94,81 @@
                                     <constraint firstItem="qd3-9Q-l1P" firstAttribute="top" secondItem="nEN-e5-gk1" secondAttribute="top" constant="20" symbolic="YES" type="default" id="fEh-aZ-JD8"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nc-lp-Uzd">
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Waiting For Ride" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YE9-vI-lyU">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Estimated Arrival in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hha-Df-XlV">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="8 mins" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0c-qu-vEl">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="114" id="SaX-d4-ehN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="axK-Zn-3vP"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="app-BM-VaN">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="Cancel Request">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelRequest:" destination="sbU-FJ-8nc" eventType="touchUpInside" id="o9W-qa-S14"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Q0c-qu-vEl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1kd-WD-cUd"/>
+                                    <constraint firstItem="hha-Df-XlV" firstAttribute="top" secondItem="YE9-vI-lyU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="CxJ-S0-w0V"/>
+                                    <constraint firstItem="YE9-vI-lyU" firstAttribute="leading" secondItem="8nc-lp-Uzd" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ETJ-jM-Tgh"/>
+                                    <constraint firstItem="YE9-vI-lyU" firstAttribute="top" secondItem="8nc-lp-Uzd" secondAttribute="top" constant="20" symbolic="YES" type="default" id="GzG-dM-fqY"/>
+                                    <constraint firstItem="app-BM-VaN" firstAttribute="leading" secondItem="8nc-lp-Uzd" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Hq8-LT-D1e"/>
+                                    <constraint firstItem="app-BM-VaN" firstAttribute="top" secondItem="axK-Zn-3vP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Kef-Y8-N3z"/>
+                                    <constraint firstItem="Q0c-qu-vEl" firstAttribute="baseline" secondItem="hha-Df-XlV" secondAttribute="baseline" type="default" id="MNk-PE-JeM"/>
+                                    <constraint firstAttribute="bottom" secondItem="app-BM-VaN" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ZAN-gw-emp"/>
+                                    <constraint firstAttribute="trailing" secondItem="YE9-vI-lyU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="aYE-YW-REw"/>
+                                    <constraint firstItem="axK-Zn-3vP" firstAttribute="leading" secondItem="8nc-lp-Uzd" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cun-xM-y02"/>
+                                    <constraint firstItem="axK-Zn-3vP" firstAttribute="top" secondItem="hha-Df-XlV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="g4u-Lb-oMe"/>
+                                    <constraint firstAttribute="trailing" secondItem="app-BM-VaN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hkn-XF-lDX"/>
+                                    <constraint firstItem="hha-Df-XlV" firstAttribute="leading" secondItem="8nc-lp-Uzd" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="luh-BN-Yv6"/>
+                                    <constraint firstAttribute="trailing" secondItem="axK-Zn-3vP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="wt2-eJ-GiE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nEN-e5-gk1" firstAttribute="trailing" secondItem="PVY-dO-WZS" secondAttribute="trailing" type="default" id="8zR-kS-SUU"/>
                             <constraint firstItem="5EI-4E-Rwk" firstAttribute="trailing" secondItem="PVY-dO-WZS" secondAttribute="trailing" type="default" id="IPg-4S-hsU"/>
+                            <constraint firstItem="5EI-4E-Rwk" firstAttribute="bottom" secondItem="nEN-e5-gk1" secondAttribute="bottom" type="default" id="Q3B-bk-nez"/>
                             <constraint firstItem="5EI-4E-Rwk" firstAttribute="leading" secondItem="PVY-dO-WZS" secondAttribute="leading" type="default" id="V8B-LS-seG"/>
-                            <constraint firstItem="nEN-e5-gk1" firstAttribute="bottom" secondItem="5EI-4E-Rwk" secondAttribute="bottom" type="default" id="YcW-cv-6ui"/>
+                            <constraint firstItem="8nc-lp-Uzd" firstAttribute="bottom" secondItem="PVY-dO-WZS" secondAttribute="bottom" type="default" id="VP4-vn-KBY"/>
+                            <constraint firstItem="8nc-lp-Uzd" firstAttribute="top" secondItem="PVY-dO-WZS" secondAttribute="top" type="default" id="jy4-40-Z5S"/>
                             <constraint firstItem="nEN-e5-gk1" firstAttribute="top" secondItem="PVY-dO-WZS" secondAttribute="top" type="default" id="lMJ-9w-Jmw"/>
                             <constraint firstItem="nEN-e5-gk1" firstAttribute="leading" secondItem="PVY-dO-WZS" secondAttribute="leading" type="default" id="oTn-hH-Hb6"/>
                             <constraint firstItem="5EI-4E-Rwk" firstAttribute="top" secondItem="PVY-dO-WZS" secondAttribute="top" type="default" id="plV-ke-bSz"/>
+                            <constraint firstItem="8nc-lp-Uzd" firstAttribute="trailing" secondItem="PVY-dO-WZS" secondAttribute="trailing" type="default" id="rgy-Oq-Hhe"/>
+                            <constraint firstItem="8nc-lp-Uzd" firstAttribute="leading" secondItem="PVY-dO-WZS" secondAttribute="leading" type="default" id="s3f-ya-Cc0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="bus+" id="78d-21-94W"/>
                     <connections>
                         <outlet property="createView" destination="nEN-e5-gk1" id="7Ao-j2-45o"/>
+                        <outlet property="mapView" destination="axK-Zn-3vP" id="lkg-h8-hjS"/>
                         <outlet property="pendingView" destination="5EI-4E-Rwk" id="0gn-Jj-V1V"/>
+                        <outlet property="pickupView" destination="8nc-lp-Uzd" id="Ej0-yf-aBO"/>
                         <outlet property="requestButton" destination="qd3-9Q-l1P" id="pTm-85-mRa"/>
                         <segue destination="IfL-nZ-BCW" kind="modal" identifier="ShowRequestNow" id="knC-oS-Uoz"/>
                     </connections>
@@ -493,7 +546,9 @@
                 <relationship kind="action" name="requestLater:"/>
                 <relationship kind="action" name="requestNow:"/>
                 <relationship kind="outlet" name="createView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
                 <relationship kind="outlet" name="pendingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="pickupView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="requestButton" candidateClass="UIButton"/>
             </relationships>
         </class>

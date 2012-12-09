@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+
 
 @interface HomeViewController : UIViewController <RKObjectLoaderDelegate>
 
 @property (strong) IBOutlet UIView* pendingView;
 @property (strong) IBOutlet UIView* createView;
+@property (strong) IBOutlet UIView* pickupView;
+@property (strong) IBOutlet MKMapView* mapView;
 @property (strong) IBOutlet UIButton* requestButton;
 
 -(IBAction)requestNow:(id)sender;
