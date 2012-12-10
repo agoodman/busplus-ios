@@ -85,6 +85,13 @@
         tVehicle.vehicleId = tVehicleId;
         [[RKObjectManager sharedManager] getObject:tVehicle delegate:self];
     }
+    
+    NSNumber* tRejected = [userInfo valueForKey:@"rejected"];
+    if( tRejected.boolValue ) {
+        async_main(^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"PassengerRejected" object:nil];
+        });
+    }
 }
 
 #pragma mark - RKObjectLoaderDelegate

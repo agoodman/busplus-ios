@@ -39,6 +39,14 @@
     });
 }
 
+- (void)passengerRejected:(NSNotification*)aNotif
+{
+    async_main(^{
+        Alert(@"No Vehicles Available", @"Unable to find a vehicle in your area");
+        [self cancelRequest:nil];
+    });
+}
+
 #pragma mark - View life cycle
 
 - (void)viewDidLoad
@@ -46,6 +54,7 @@
     [super viewDidLoad];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(passengerUpdated:) name:@"PassengerUpdated" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(passengerRejected:) name:@"PassengerRejected" object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
