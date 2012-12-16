@@ -73,6 +73,9 @@
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEN-e5-gk1">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qd3-9Q-l1P">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="40l-KN-vBv"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <state key="normal" title="I Need A Ride">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,13 +88,24 @@
                                             <action selector="requestNow:" destination="sbU-FJ-8nc" eventType="touchUpInside" id="PXz-Dz-agv"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="There are XX vehicles in your area" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvu-JJ-j3E">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="dtR-jH-QAG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="qd3-9Q-l1P" firstAttribute="leading" secondItem="nEN-e5-gk1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0EG-wL-uBY"/>
-                                    <constraint firstAttribute="bottom" secondItem="qd3-9Q-l1P" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="9V2-Xj-HI2"/>
+                                    <constraint firstItem="pvu-JJ-j3E" firstAttribute="top" secondItem="qd3-9Q-l1P" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QPY-L2-PPP"/>
                                     <constraint firstAttribute="trailing" secondItem="qd3-9Q-l1P" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="S23-Ay-3hK"/>
+                                    <constraint firstAttribute="trailing" secondItem="pvu-JJ-j3E" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="XQK-Qk-hzh"/>
+                                    <constraint firstItem="pvu-JJ-j3E" firstAttribute="leading" secondItem="nEN-e5-gk1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Xho-9n-tND"/>
                                     <constraint firstItem="qd3-9Q-l1P" firstAttribute="top" secondItem="nEN-e5-gk1" secondAttribute="top" constant="20" symbolic="YES" type="default" id="fEh-aZ-JD8"/>
+                                    <constraint firstItem="pvu-JJ-j3E" firstAttribute="baseline" secondItem="qd3-9Q-l1P" secondAttribute="baseline" type="default" id="uLh-J0-ocA"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nc-lp-Uzd">
@@ -152,9 +166,9 @@
                         <constraints>
                             <constraint firstItem="nEN-e5-gk1" firstAttribute="trailing" secondItem="PVY-dO-WZS" secondAttribute="trailing" type="default" id="8zR-kS-SUU"/>
                             <constraint firstItem="5EI-4E-Rwk" firstAttribute="trailing" secondItem="PVY-dO-WZS" secondAttribute="trailing" type="default" id="IPg-4S-hsU"/>
-                            <constraint firstItem="5EI-4E-Rwk" firstAttribute="bottom" secondItem="nEN-e5-gk1" secondAttribute="bottom" type="default" id="Q3B-bk-nez"/>
                             <constraint firstItem="5EI-4E-Rwk" firstAttribute="leading" secondItem="PVY-dO-WZS" secondAttribute="leading" type="default" id="V8B-LS-seG"/>
                             <constraint firstItem="8nc-lp-Uzd" firstAttribute="bottom" secondItem="PVY-dO-WZS" secondAttribute="bottom" type="default" id="VP4-vn-KBY"/>
+                            <constraint firstItem="nEN-e5-gk1" firstAttribute="bottom" secondItem="PVY-dO-WZS" secondAttribute="bottom" type="default" id="g6j-Um-NCN"/>
                             <constraint firstItem="8nc-lp-Uzd" firstAttribute="top" secondItem="PVY-dO-WZS" secondAttribute="top" type="default" id="jy4-40-Z5S"/>
                             <constraint firstItem="nEN-e5-gk1" firstAttribute="top" secondItem="PVY-dO-WZS" secondAttribute="top" type="default" id="lMJ-9w-Jmw"/>
                             <constraint firstItem="nEN-e5-gk1" firstAttribute="leading" secondItem="PVY-dO-WZS" secondAttribute="leading" type="default" id="oTn-hH-Hb6"/>
@@ -165,6 +179,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="bus+" id="78d-21-94W"/>
                     <connections>
+                        <outlet property="activeVehiclesLabel" destination="pvu-JJ-j3E" id="AF1-zb-GQb"/>
                         <outlet property="createView" destination="nEN-e5-gk1" id="7Ao-j2-45o"/>
                         <outlet property="mapView" destination="axK-Zn-3vP" id="lkg-h8-hjS"/>
                         <outlet property="pendingView" destination="5EI-4E-Rwk" id="0gn-Jj-V1V"/>
@@ -545,6 +560,7 @@
                 <relationship kind="action" name="cancelRequest:"/>
                 <relationship kind="action" name="requestLater:"/>
                 <relationship kind="action" name="requestNow:"/>
+                <relationship kind="outlet" name="activeVehiclesLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="createView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
                 <relationship kind="outlet" name="pendingView" candidateClass="UIView"/>
